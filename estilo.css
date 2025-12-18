@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    color: var(--soft-white);
+    background: var(--black-gray);
+    scroll-behavior: smooth;
+}
+
+:root {
+    --soft-black: #0F0F0F;
+    --black-gray: #1E1E1E;
+    --soft-white: #EAEAEA; 
+    --gray: #BDBDBD;
+    --purple: #7C3AED;
+    --black-blue: #3030b3;
+    --glass: rgba(255, 255, 255, 0.1);
+}
+
+.flex {
+    display: flex;
+}
+
+.header {
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    padding: 1.25rem 5rem;
+    width: 100vw;
+    justify-content: space-between;
+    background: transparent;
+    backdrop-filter:blur(4px) ;
+    
+}
+
+.name_symbol {
+    align-items: center;
+    gap: 1rem;
+    background-color: transparent;
+    font-weight: 700;
+}
+
+.name {
+    font-size: 1.6rem;
+    background-color: transparent;
+}
+
+.symbol {
+    color: var(--black-blue);
+    background-color: transparent;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.menu_link {
+    background-color: transparent;
+    gap: 3.2rem;
+    align-items: center;
+}
+
+.link {
+    position: relative;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.link::after {
+    content: ' ';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--black-blue), var(--gray));
+    transition: width 0.5s ease;
+}
+
+.link:hover::after {
+    width: 100%;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--purple);
+    border-radius: 8px
+}
+
+.btn:hover {
+    transition: 0.3s ease;
+    transform: translateY(-3px) scale(1.03);
+}
+
+.lobby_img {
+    object-fit: cover;
+    width: 33rem;
+    border-radius: 4rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.home {
+    min-height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 5rem;
+}
+
+.purple {  
+    background: linear-gradient(to right,var(--black-blue), var(--purple));  
+    -webkit-background-clip: text;
+    background-clip: text; 
+    -webkit-text-fill-color: transparent;
+}
+
+.lobby{
+    font-size: 4rem;
+}
+
+p {
+    color: var(--gray);
+    margin: 1.7rem 0;
+}
+
+
